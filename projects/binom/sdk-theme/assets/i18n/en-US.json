@@ -1,0 +1,12 @@
+{
+    "theme": {
+        "darkMode": "Dark Mode",
+        "autoDarkMode": "Auto",
+        "useSytem": "Use System Settings",
+        "saveSettings": "Save",
+        "from": "From",
+        "to": "To",
+        "alwaysDarkMode": "Always On",
+        "themeBackground": "Background"
+      }
+}

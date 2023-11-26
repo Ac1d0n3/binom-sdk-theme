@@ -1,0 +1,15 @@
+.bn-theme-background{
+    top:0px; 
+    width:100vw;
+    height:100vh; 
+    position:fixed;
+    z-index:-99;
+}
+
+.bn-theme-background-back{
+    top:0px; 
+    width:100vw;
+    height:100vh; 
+    position:fixed;
+    z-index:-100;
+}
