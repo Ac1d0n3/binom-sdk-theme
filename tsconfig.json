@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@binom/sdk-theme/*": [
+        "./dist/binom/sdk-theme/*"
+      ],
       "@binom/sdk-theme": [
         "./dist/binom/sdk-theme"
       ]

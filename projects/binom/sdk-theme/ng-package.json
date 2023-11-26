@@ -3,5 +3,9 @@
   "dest": "../../../dist/binom/sdk-theme",
   "lib": {
     "entryFile": "public-api.ts"
-  }
+  },
+  "assets": [
+   "./styles/*.*",
+   "./assets/**/*.*"
+  ]
 }

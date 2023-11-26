@@ -7,10 +7,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { BnThemeSwitchMenuComponent } from '@binom/sdk-theme/theme-switch-menu';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, MatToolbarModule, TranslateModule, MatSidenavModule, MatButtonModule, MatExpansionModule],
+  imports: [CommonModule, RouterOutlet,BnThemeSwitchMenuComponent, RouterModule, MatToolbarModule, TranslateModule, MatSidenavModule, MatButtonModule, MatExpansionModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

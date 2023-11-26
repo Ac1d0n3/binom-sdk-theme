@@ -1,1 +1,55 @@
-<p>bn-theme-switch works!</p>
+<div class="bn-menu-group">
+    <div class="bn-menu-theme">
+    <mat-radio-group *ngIf="themes.length > 1"
+        aria-label="Select an option" [(ngModel)]="data.activeTheme">
+        <mat-radio-button class="clearfix"
+        *ngFor="let theme of themes" [value]="theme.styleName"
+        (click)="changeTheme(theme.styleName)">{{theme.name}}
+    
+    </mat-radio-button>
+    </mat-radio-group>
+    </div>
+
+    <div class="bn-menu-row-switch regular-border">
+        <mat-checkbox  aria-label="autoDarkMode" [(ngModel)]="data.autoDarkMode" (change)="changeSettings()">
+        {{'theme.autoDarkMode' | translate }}</mat-checkbox>
+        <mat-slide-toggle style="margin-top:8px" [(ngModel)]="data.darkMode" (change)="changeDark()"> </mat-slide-toggle> 
+    
+        <div class="bn-menu-icon">
+        <span class="material-icons-outlined ">{{data.darkMode? 'dark_mode':'light_mode'}}</span>
+        </div>
+    </div>
+    
+    <ng-container *ngIf="data.autoDarkMode">
+    <div class="bn-menu-row regular-border" *ngIf="data.allowSave">
+        <mat-checkbox  aria-label="use system settings" [(ngModel)]="data.useSystem" (change)="changeSettings()">
+        {{'theme.useSytem' | translate }}</mat-checkbox>
+    </div>
+
+    <div *ngIf="!data.useSystem" class="bn-menu-fromto-wrapper">
+        <mat-form-field class="bn-menu-fromto" appearance="outline">
+        <mat-label>{{'theme.from' | translate }}</mat-label>
+        <input matInput placeholder="20:00" [(ngModel)]="data.darkFrom">
+        </mat-form-field>
+        <mat-form-field class="bn-menu-fromto" appearance="outline">
+        <mat-label>{{'theme.to' | translate }}</mat-label>
+        <input matInput placeholder="06:30" [(ngModel)]="data.darkTo">
+        </mat-form-field>
+    </div>
+
+    </ng-container>
+
+
+    <div class="bn-menu-row regular-border">
+        <mat-checkbox aria-label="use theme background" [(ngModel)]="data.themeBackground" (change)="changeSettings()">
+        {{'theme.themeBackground' | translate }}</mat-checkbox>
+        <div class="bn-menu-icon">  
+        <span class="material-icons-outlined">wallpaper</span>
+        </div>
+    </div>
+
+    <div class="bn-menu-row regular-border" *ngIf="data.allowSave">
+    <mat-checkbox aria-label="save theme settings" [(ngModel)]="data.saveSettings" (change)="changeSettings()">{{'theme.saveSettings' | translate }}</mat-checkbox>
+    </div>
+    
+</div>

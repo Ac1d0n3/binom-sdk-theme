@@ -1,1 +1,8 @@
-<p>bn-theme-switch-menu works!</p>
+<button mat-icon-button class="font-fa" [matMenuTriggerFor]="menu" aria-label="theme"
+matTooltip="{{ 'tooltips.theme' | translate }}" [matTooltipDisabled]="!enableToolTips">
+    <i class="fas fa-fill-drip"></i>
+  </button>
+<mat-menu #menu="matMenu">
+    <div  (click)="$event.stopPropagation();" ><bn-theme-switch [enableToolTips]="enableToolTips"></bn-theme-switch></div> 
+</mat-menu>
+
