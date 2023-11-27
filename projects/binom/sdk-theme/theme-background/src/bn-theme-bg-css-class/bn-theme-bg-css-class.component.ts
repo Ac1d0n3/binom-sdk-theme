@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './bn-theme-bg-css-class.component.html',
-  styleUrl: './bn-theme-bg-css-class.component.css'
+  styleUrls: ['./bn-theme-bg-css-class.component.css', '../bn-theme-background.component.css']
 })
 export class BnThemeBgCssClassComponent {
 

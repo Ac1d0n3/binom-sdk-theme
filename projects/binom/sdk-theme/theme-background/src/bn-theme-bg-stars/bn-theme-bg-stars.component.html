@@ -1,1 +1,33 @@
-<p>bn-theme-bg-stars works!</p>
+<div class="bn-theme-background-back">
+<div  [style]="style">
+    <svg  style="height:100vh" class="starry-sky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 3800">
+        
+        
+            <path *ngFor="let star of starsAnimated" 
+            [attr.cx]="star.x" [attr.transform]="'translate('+star.x+' '+star.y+') scale('+star.r+')'" 
+            d="M200,67,250.91168824543144,157.08831175456856,341,208,250.91168824543144,258.91168824543144,200,349,149.08831175456856,258.91168824543144,59,208.00000000000003,149.08831175456856,157.08831175456856Z" 
+            fill="rgba(255,255,255, 0.8)"
+            stroke="none" 
+            stroke-width="0" 
+            opacity="0">
+                <animate attributeName="opacity" [attr.values]="star.opacity" [attr.dur]="star.duration" repeatCount="indefinite" [attr.begin]="star.delay + 'ms'" />
+            </path>
+
+          
+
+            <path *ngFor="let star of stars" 
+            [attr.cx]="star.x" [attr.transform]="'translate('+star.x+' '+star.y+') scale('+star.r+')'" 
+            d="M200,67,250.91168824543144,157.08831175456856,341,208,250.91168824543144,258.91168824543144,200,349,149.08831175456856,258.91168824543144,59,208.00000000000003,149.08831175456856,157.08831175456856Z" 
+            fill="rgba(255,255,255, 0.8)"
+            stroke="none" 
+            stroke-width="0" 
+            [attr.opacity]="star.opacity">
+            
+            </path>
+    
+        </svg>
+        
+</div>
+</div>
+    
+

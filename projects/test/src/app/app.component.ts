@@ -10,12 +10,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { BnThemeSwitchMenuComponent } from '@binom/sdk-theme/theme-switch-menu';
 import { BnTranslateSwitchMenuComponent } from '@binom/sdk-core/translate';
 import {BnHelpService, BnHelpSwitchMenuComponent } from '@binom/sdk-core/help'
+import { BnThemeBackgroundComponent } from '@binom/sdk-theme/theme-background';
+import { BnRouterDataAndTitleService } from '@binom/sdk-core/router';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet,BnThemeSwitchMenuComponent, RouterModule, MatToolbarModule, TranslateModule, 
-    MatSidenavModule, MatButtonModule, MatExpansionModule,BnHelpSwitchMenuComponent,BnTranslateSwitchMenuComponent],
-  providers:[BnThemeService],
+    MatSidenavModule, MatButtonModule, MatExpansionModule,BnHelpSwitchMenuComponent,BnTranslateSwitchMenuComponent, BnThemeBackgroundComponent],
+  providers:[ BnRouterDataAndTitleService,BnThemeService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

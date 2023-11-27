@@ -1,0 +1,21 @@
+.animate-wave { animation: wave 120s cubic-bezier(0.5, 0.89, 0.2, 1)  infinite; }
+.animate-wave2 { animation: wave2 60s linear  infinite; }
+.animate-wave3 { animation: wave3 90s  cubic-bezier(0.89, 1,  0.32, 1)infinite; }
+
+@keyframes wave {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(1.7); }
+    100% { transform: scaleX(1); }
+}
+
+@keyframes wave2 {
+    0% {transform: scaleX(1);}
+    50% {transform: scaleX(2);}
+    100% {transform: scaleX(1);}
+}
+
+@keyframes wave3 {
+	0% {transform: scaleX(1);}
+	50% {transform: scaleX(1.7);}
+	100% {transform: scaleX(1);}
+}

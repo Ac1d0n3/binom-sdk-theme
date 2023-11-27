@@ -1,1 +1,27 @@
-<p>bn-theme-background works!</p>
+
+<bn-bn-theme-bg-waves
+*ngIf="useBg === 'wave'"
+  [color1]="color"
+  [color2]="color2"
+></bn-bn-theme-bg-waves>
+
+<bn-bn-theme-bg-stars
+*ngIf="useBg === 'stars'"
+[color1]="color"
+[color2]="color2"
+></bn-bn-theme-bg-stars>
+
+<bn-bn-theme-bg-image
+*ngIf="useBg === 'carbon'"
+image="real-carbon-fibre.png"
+[color1]="color"
+[color2]="color2"
+></bn-bn-theme-bg-image>
+
+<bn-bn-theme-bg-image
+*ngIf="useBg === 'darkwood'"
+image="darkwood.jpg"
+[color1]="color"
+[color2]="color2"
+></bn-bn-theme-bg-image>
+

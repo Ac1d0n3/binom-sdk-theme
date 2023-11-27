@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './bn-theme-bg-gradient.component.html',
-  styleUrl: './bn-theme-bg-gradient.component.css'
+  styleUrls: ['./bn-theme-bg-gradient.component.css', '../bn-theme-background.component.css']
 })
 export class BnThemeBgGradientComponent {
 
