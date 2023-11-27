@@ -1,6 +1,23 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+
 @import '../../../node_modules/@binom/sdk-core/styles/core.scss';
+@import '../../../node_modules/@binom/sdk-core/styles/material-icons.scss';
 
-/* Above not needed if you include @binom/sdk-core */
+@import '../../../dist/binom/sdk-theme/styles/themes/binom-legacy/theme.scss';
+@import '../../../dist/binom/sdk-theme/styles/themes/nature-one/theme.scss';
+@import '../../../dist/binom/sdk-theme/styles/themes/nature-two/theme.scss';
+@import '../../../dist/binom/sdk-theme/styles/themes/blue-sky/theme.scss';
 
-@import './styles/material-icons.scss';
 
+@import '../../../dist/binom/sdk-theme/styles/global-theme-tpl.scss';
+@import '../../../dist/binom/sdk-theme/styles/global-mat-fix.scss';

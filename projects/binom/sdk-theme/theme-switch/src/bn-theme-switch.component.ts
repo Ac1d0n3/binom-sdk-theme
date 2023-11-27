@@ -46,7 +46,7 @@ export class BnThemeSwitchComponent implements OnInit, OnDestroy {
     });
 
     this.themes =  this.bnThemeService.bnThemes
-
+    
   }
 
   changeTheme(theme:string){

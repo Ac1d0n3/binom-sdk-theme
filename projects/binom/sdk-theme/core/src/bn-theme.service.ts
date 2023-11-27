@@ -28,7 +28,7 @@ export class BnThemeService {
     autoDarkMode: true,
     alwaysDark: false,
     useSystem: true,
-    activeTheme: 'default-theme',
+    activeTheme: 'binom-legacy',
     darkMode: false,
     darkFrom: '21:00',
     darkTo: '11:30',

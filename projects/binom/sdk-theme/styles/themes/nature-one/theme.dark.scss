@@ -1,0 +1,34 @@
+$bgColor: #40424f;
+.mat-mdc-menu-content, .mat-mdc-form-field:not(.bn-search) > .mat-mdc-text-field-wrapper{
+  background-color:  var(--bg-color);
+  color:white  
+}
+
+
+.mdc-menu-surface,.mat-mdc-menu-panel{
+  color:  var(--app-grid-bg) !important;
+  background-color:  var(--bg-color); 
+}
+
+
+.mat-mdc-table, .mat-mdc-card, .mat-mdc-dialog-content, .mat-mdc-dialog-container,.mat-mdc-dialog-actions, .mat-expansion-panel, .mat-mdc-dialog-surface{
+  background: #40424f !important;
+  background-color: #40424f !important;
+}
+
+.content-bg{
+background-color: rgba($bgColor ,0.5) ; 
+}
+.mat-mdc-paginator{
+background: transparent !important
+}
+
+.bn-row-info-card-list{
+background-color:  var(--bg-color); 
+}
+
+.centerCardSmall mat-card{
+border-radius: 20px
+}
+
+

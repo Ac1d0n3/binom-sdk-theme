@@ -4,6 +4,10 @@
     color:  var(--text-color)
 }
 
+.app-bg{
+    background-color:  var(--bg-color);
+}
+
 .accent-fill{ fill:  var(--color-accent); }
 .primary-fill{ fill:  var(--color-primary); }
 .warn-fill{ fill:  var(--color-warn); }

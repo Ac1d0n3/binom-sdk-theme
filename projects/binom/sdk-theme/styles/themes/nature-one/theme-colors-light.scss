@@ -1,0 +1,114 @@
+/* For use in src/lib/core/theming/_palette.scss */
+$mat-accent: (
+    50 : #e8e8ea,
+    100 : #c6c6ca,
+    200 : #a0a1a7,
+    300 : #797b84,
+    400 : #5d5e69,
+    500 : #40424f,
+    600 : #3a3c48,
+    700 : #32333f,
+    800 : #2a2b36,
+    900 : #1c1d26,
+    A100 : #6e81ff,
+    A200 : #3b54ff,
+    A400 : #0827ff,
+    A700 : #001eee,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$mat-primary: (
+    50 : #f8fbea,
+    100 : #eef4cb,
+    200 : #e3eda8,
+    300 : #d8e685,
+    400 : #cfe06b,
+    500 : #c7db51,
+    600 : #c1d74a,
+    700 : #bad240,
+    800 : #b3cd37,
+    900 : #a6c427,
+    A100 : #ffffff,
+    A200 : #f5ffcf,
+    A400 : #ebff9c,
+    A700 : #e6ff82,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-warn: (
+    50 : #fce9e7,
+    100 : #f8c8c2,
+    200 : #f3a49a,
+    300 : #ee8072,
+    400 : #eb6453,
+    500 : #e74935,
+    600 : #e44230,
+    700 : #e03928,
+    800 : #dd3122,
+    900 : #d72116,
+    A100 : #ffffff,
+    A200 : #ffd6d4,
+    A400 : #ffa6a1,
+    A700 : #ff8d88,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$light-background: #fff;
+$light-primary: mat.define-palette($mat-primary, 500, 200, 700);
+$light-accent: mat.define-palette($mat-accent, 500, 200, 700);
+$light-warn: mat.define-palette($mat-warn, 500, 200, 700);
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn
+  )
+ 
+ ));

@@ -1,0 +1,100 @@
+@import './theme-colors-light.scss';
+@import './theme-colors-dark.scss';
+
+
+@import './theme-typography.scss';
+
+.nature-two {
+    @include mat.all-component-colors($light-theme);
+    $color-accent: mat.get-color-from-palette($light-accent, 500);
+    $color-primary: mat.get-color-from-palette($light-primary,500);
+    $color-warn: mat.get-color-from-palette($light-warn, 500);
+
+    --color-accent: #{mat.get-color-from-palette($light-accent, 500)};
+    --color-accent-font: white;
+    
+    --color-primary: #{mat.get-color-from-palette($light-primary, 500)};
+    --color-primary-font: #fff;
+    
+    --color-warn: #{mat.get-color-from-palette($light-warn, 500)};
+    --color-warn-font: #fff;
+
+    --text-color: #40424f;
+    --bg-color: #fff;
+    --bg-color-content: #fff;
+    --tag-bg:   rgba(24, 24, 24, 0.12);
+    --tag-font-color: #40424f;
+    --tag-bg-hover: $color-primary;
+    --tag-font-hover:  #40424f;
+    --tag-shadow: rgba(0, 0, 0, 0.25);
+    --tag-selected: $color-accent;
+    
+    --outlines: #adadad;
+    
+    --app-grid-bg: silver;
+    --app-grid-bg-hover: #efefef;
+    --app-grid-text-hover: #40424f;
+    --form-bg: white;
+    
+    --fix-color1: #40424f;
+    --fix-color2: #40424f;
+    --fix-color3: #e0e0e0;
+    --fix-color4: #e0e0e0;
+    --fix-color5: #fff;
+    --fix-color6: #fff;
+ 
+    --fix-modal-overaly: #adadad;
+    
+    @import './theme.light.scss';
+
+}
+
+.nature-two-dark {
+
+    @include mat.all-component-colors($dark-theme);
+
+    $color-accent: mat.get-color-from-palette($dark-accent, 500);
+    $color-primary: mat.get-color-from-palette($dark-primary, 500);
+    $color-warn: mat.get-color-from-palette($dark-warn, 500);
+    --color-accent: #{mat.get-color-from-palette($dark-accent, 500)};
+    --color-accent-font: #fff;
+
+    --color-primary: #{mat.get-color-from-palette($dark-primary, 500)};
+    --color-primary-font: white;
+
+    --color-warn: #{mat.get-color-from-palette($dark-warn, 500)};
+    --color-warn-font: #fff;
+
+    --text-color: #fff;
+    --bg-color: #40424f;
+    --bg-color-content: #fff;
+
+    --tag-bg:  #adadad;
+    --tag-font-color: #fff;
+    --tag-bg-hover: $color-primary;
+    --tag-font-hover:  #40424f;
+    --tag-shadow: rgba(0, 0, 0, 0.25);
+    --tag-selected: $color-accent;
+
+    --outlines: #adadad;
+
+    --app-grid-bg: silver;
+    --app-grid-bg-hover: #c7db51;
+    --app-grid-text-hover: #40424f;
+    --form-bg: #40424f;
+
+    --fix-color1: #c7db51;
+    --fix-color2: #616161;
+    --fix-color3: #adadad;
+    --fix-color4: #616161;
+    --fix-color5: #fff;
+    --fix-color6: #40424f;
+
+    --fix-modal-overaly: #adadad;
+
+    @import './theme.dark.scss';
+   
+}
+
+
+

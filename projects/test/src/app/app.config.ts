@@ -20,7 +20,7 @@ export const appConfig: ApplicationConfig = {
             useFactory: createTranslateLoader,
             deps: [HttpClient],
         },
-    })), provideAnimations()]
+    })), provideAnimations(), provideAnimations()]
 };
 
 
