@@ -60,7 +60,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/test/src/favicon.ico",
-              "projects/test/src/assets"
+              "projects/test/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@binom/sdk-core/assets",
+                "output": "assets"
+              }
             ],
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css",
