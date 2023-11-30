@@ -1,27 +1,14 @@
 
-<bn-bn-theme-bg-waves
-*ngIf="useBg === 'wave'"
-  [color1]="color"
-  [color2]="color2"
-></bn-bn-theme-bg-waves>
-
-<bn-bn-theme-bg-stars
-*ngIf="useBg === 'stars'"
-[color1]="color"
-[color2]="color2"
-></bn-bn-theme-bg-stars>
-
-<bn-bn-theme-bg-image
-*ngIf="useBg === 'carbon'"
-image="real-carbon-fibre.png"
-[color1]="color"
-[color2]="color2"
-></bn-bn-theme-bg-image>
-
-<bn-bn-theme-bg-image
-*ngIf="useBg === 'darkwood'"
-image="darkwood.jpg"
-[color1]="color"
-[color2]="color2"
-></bn-bn-theme-bg-image>
-
+@if(useBg === 'wave'){
+  <bn-bn-theme-bg-waves [color1]="color" [color2]="color2"></bn-bn-theme-bg-waves>
+} @else if(useBg === 'stars'){
+  <bn-bn-theme-bg-stars [color1]="color" [color2]="color2"></bn-bn-theme-bg-stars>
+} @else if (useBg === 'carbon'){
+  <bn-bn-theme-bg-image image="real-carbon-fibre.png" [color1]="color" [color2]="color2"></bn-bn-theme-bg-image>
+} @else if (useBg === 'darkwood'){
+  <bn-bn-theme-bg-image image="darkwood.jpg" [color1]="color" [color2]="color2"></bn-bn-theme-bg-image>
+} @else if (useBg === 'image'){
+  <bn-bn-theme-bg-image [image]="curVals.imageUrl" [color1]="color" [color2]="color2"></bn-bn-theme-bg-image>
+} @else if (useBg === 'image'){
+  <bn-bn-theme-bg-css-class [cssClass]="curVals.imageUrl"></bn-bn-theme-bg-css-class>
+}

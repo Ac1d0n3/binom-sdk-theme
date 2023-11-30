@@ -1,6 +1,6 @@
 # @binom/sdk-theme
 ---------------------------------------------------------------------------------
-** CORE V1.0.1
+** CORE V1.0.2
 Author: Thomas Lindackers 
 
 BINOM.net

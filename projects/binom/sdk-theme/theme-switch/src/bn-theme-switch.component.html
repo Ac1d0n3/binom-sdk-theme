@@ -1,14 +1,15 @@
 <div class="bn-menu-group">
     <div class="bn-menu-theme">
-
-    <mat-radio-group *ngIf="themes.length > 1"
-        aria-label="Select an option" [(ngModel)]="data.activeTheme">
-        <mat-radio-button class="clearfix"
-        *ngFor="let theme of themes" [value]="theme.styleName"
-        (click)="changeTheme(theme.styleName)">{{theme.name}}
     
-    </mat-radio-button>
-    </mat-radio-group>
+    @if(themes.length > 1){
+        <mat-radio-group
+            aria-label="Select an option" [(ngModel)]="data.activeTheme">
+            @for(theme of themes; track $index){
+                <mat-radio-button class="clearfix" [value]="theme.styleName" (click)="changeTheme(theme.styleName)">{{theme.name}} </mat-radio-button>
+            }
+        </mat-radio-group>
+    }
+    
     </div>
 
     <div class="bn-menu-row-switch regular-border">
@@ -21,25 +22,25 @@
         </div>
     </div>
     
-    <ng-container *ngIf="data.autoDarkMode">
-    <div class="bn-menu-row regular-border" *ngIf="data.allowSave">
-        <mat-checkbox  aria-label="use system settings" [(ngModel)]="data.useSystem" (change)="changeSettings()">
-        {{'theme.useSytem' | translate }}</mat-checkbox>
-    </div>
-
-    <div *ngIf="!data.useSystem" class="bn-menu-fromto-wrapper">
-        <mat-form-field class="bn-menu-fromto" appearance="outline">
-        <mat-label>{{'theme.from' | translate }}</mat-label>
-        <input matInput placeholder="20:00" [(ngModel)]="data.darkFrom">
-        </mat-form-field>
-        <mat-form-field class="bn-menu-fromto" appearance="outline">
-        <mat-label>{{'theme.to' | translate }}</mat-label>
-        <input matInput placeholder="06:30" [(ngModel)]="data.darkTo">
-        </mat-form-field>
-    </div>
-
-    </ng-container>
-
+    @if(data.autoDarkMode){
+        <div class="bn-menu-row regular-border" *ngIf="data.allowSave">
+            <mat-checkbox  aria-label="use system settings" [(ngModel)]="data.useSystem" (change)="changeSettings()">
+            {{'theme.useSytem' | translate }}</mat-checkbox>
+        </div>
+        @if(!data.useSystem){
+            <div class="bn-menu-fromto-wrapper">
+                <mat-form-field class="bn-menu-fromto" appearance="outline">
+                <mat-label>{{'theme.from' | translate }}</mat-label>
+                <input matInput placeholder="20:00" [(ngModel)]="data.darkFrom">
+                </mat-form-field>
+                <mat-form-field class="bn-menu-fromto" appearance="outline">
+                <mat-label>{{'theme.to' | translate }}</mat-label>
+                <input matInput placeholder="06:30" [(ngModel)]="data.darkTo">
+                </mat-form-field>
+            </div>
+        }
+       
+    }
 
     <div class="bn-menu-row regular-border">
         <mat-checkbox aria-label="use theme background" [(ngModel)]="data.themeBackground" (change)="changeSettings()">
