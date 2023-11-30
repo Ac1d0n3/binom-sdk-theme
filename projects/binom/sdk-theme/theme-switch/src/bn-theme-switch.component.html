@@ -23,10 +23,13 @@
     </div>
     
     @if(data.autoDarkMode){
-        <div class="bn-menu-row regular-border" *ngIf="data.allowSave">
-            <mat-checkbox  aria-label="use system settings" [(ngModel)]="data.useSystem" (change)="changeSettings()">
-            {{'theme.useSytem' | translate }}</mat-checkbox>
-        </div>
+        @if(data.allowSave){
+            <div class="bn-menu-row regular-border">
+                <mat-checkbox  aria-label="use system settings" [(ngModel)]="data.useSystem" (change)="changeSettings()">
+                {{'theme.useSytem' | translate }}</mat-checkbox>
+            </div>
+        }
+        
         @if(!data.useSystem){
             <div class="bn-menu-fromto-wrapper">
                 <mat-form-field class="bn-menu-fromto" appearance="outline">
@@ -49,9 +52,12 @@
         <span class="material-icons-outlined">wallpaper</span>
         </div>
     </div>
-
-    <div class="bn-menu-row regular-border" *ngIf="data.allowSave">
-    <mat-checkbox aria-label="save theme settings" [(ngModel)]="data.saveSettings" (change)="changeSettings()">{{'theme.saveSettings' | translate }}</mat-checkbox>
-    </div>
+    
+    @if(data.allowSave){
+        <div class="bn-menu-row regular-border">
+        <mat-checkbox aria-label="save theme settings" [(ngModel)]="data.saveSettings" (change)="changeSettings()">{{'theme.saveSettings' | translate }}</mat-checkbox>
+        </div>
+    }
     
 </div>
+
